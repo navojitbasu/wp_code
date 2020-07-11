@@ -1,0 +1,13 @@
+<div class="col-sm-6">
+<div class="form-group">[text* Name class:form-control placeholder "Name*"]</div>
+<div class="form-group">[tel* Number minlength:10 maxlength:12 step:3 class:form-control  placeholder "Number*"] </div>-------->> Phone Number validation
+<div class="form-group">[email* Email class:form-control placeholder "Email*"] </div>
+<div class="form-group">[number* Age min:1 max:100 class:form-control placeholder "Age*"] </div>--------->> Number validation start from 1
+<div class="form-group">[text* Nationality class:form-control placeholder "Nationality*"]</div></div>
+<div class="col-sm-6"><div class="form-group"> [text* city class:form-control placeholder "city*"] </div>
+<div class="form-group"> [text* Qualification class:form-control placeholder "Current or Post Qualification*"]</div>
+<div class="form-group">[text* Study class:form-control placeholder "Desired Course - Level of Study*"] </div>
+<div class="form-group"> [text* DesiredCountry class:form-control placeholder "Desired Country*"] </div> </div>
+<div class="col-sm-12"><div class="form-group"> <label>Message *</label>
+                       [textarea* Message class:form-control x8]</div> </div>
+<div class="col-sm-12 text-center"> <div class="form-group">[submit class:btn class:btn-default class:submit-button "Submit Message &#xf0da;"]</div> </div>
