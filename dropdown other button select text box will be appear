@@ -1,0 +1,32 @@
+<div class="col-sm-6">
+<div class="form-group">[text* Name class:form-control placeholder "Name*"]</div>
+<div class="form-group">[tel* Number minlength:10 maxlength:12 step:3 class:form-control  placeholder "Number*"] </div>
+<div class="form-group">[email* Email class:form-control placeholder "Email*"] </div>
+<div class="form-group">[select* Age class:form-control first_as_label "Age*" "1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" "20" "21" "22" "23" "24" "25" "26" "27" "28" "29" "30" "31" "32" "33" "34" "35" "36" "37" "38" "39" "40" "41" "42" "43" "44" "45" "46" "47" "48" "49" "50" "51" "52" "53" "54" "55" "56" "57" "58" "59" "60" "61" "62" "63" "64" "65" "66" "67" "68" "69" "70" "71" "72" "73" "74" "75" "76" "77" "78" "79" "80" "81" "82" "83" "84" "85" "86" "87" "88" "89" "90" "91" "92" "93" "94" "95" "96" "97" "98" "99" "100"] </div>
+<div class="form-group">[text* Nationality class:form-control placeholder "Nationality*"]</div></div>
+<div class="col-sm-6"><div class="form-group"> [text* city class:form-control placeholder "City*"] </div>
+<div class="form-group"> [select* Qualification id:Favoritequal class:form-control first_as_label "Current or Post Qualification*" "Year 10" "Year 12" "Diploma" "Bachelor" "Master"] </div>
+<div class="form-group" id="EnterFavoriteColorLabel">[text  Bachelor of Business class:form-control placeholder "Bachelor of Business"]  </div>
+<div class="form-group"> [select* DesiredCountry class:form-control first_as_label "Desired Country*" "Australia" "Canada" "Dubai" "Indonesia" "Malaysia" "New Zealand" "Singapore"] </div>
+<div class="form-group">[text* Study class:form-control placeholder "Desired Course - Level of Study*"] </div>
+ </div>
+<div class="col-sm-12"><div class="form-group"> <label>Message *</label>
+                       [textarea* Message class:form-control x8]</div> </div>
+<div class="col-sm-12 text-center"> <div class="form-group">[submit class:btn class:btn-default class:submit-button "Submit Message &#xf0da;"]</div> </div>
+
+<script language="javascript" type="text/javascript">
+// Hide the favorite-color text field by default
+document.getElementById("EnterFavoriteColorLabel").style.display = 'none';
+// On every 'Change' of the drop down with the ID "Favoritequal" call the displayTextField function
+document.getElementById("Favoritequal").addEventListener("change", displayTextField);
+  function displayTextField() {
+    // Get the value of the selected drop down
+    var dropDownText = document.getElementById("Favoritequal").value;
+    // If selected text matches 'Other', display the text field.
+    if (dropDownText == "Bachelor") {
+      document.getElementById("EnterFavoriteColorLabel").style.display = 'block';
+    } else {
+      document.getElementById("EnterFavoriteColorLabel").style.display = 'none';
+    }
+  }
+</script>
