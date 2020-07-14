@@ -27,3 +27,36 @@ $('#to').val($.datepicker.formatDate('mm-dd-yy', new Date(rMax)));
             }
         });
     });
+
+
+<!Doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    
+  $(".date").datepicker({
+    onSelect: function(dateText) {
+      display("Selected date: " + dateText + ", Current Selected Value= " + this.value);
+      $(this).change();
+    }
+  }).on("change", function() {
+    display("Change event");
+  });
+
+  function display(msg) {
+    $("<p>").html(msg).appendTo(document.body);
+  }
+  });
+  
+  </script>
+</head>
+<body>
+ 
+Date: <input type='text' class='date' id="datepicker">
+
+</body>
+</html>
