@@ -1,0 +1,29 @@
+<div class="demo"> 
+ 
+<label for="from">From</label> 
+<input type="text" id="from" name="from"/> 
+<label for="to">to</label> 
+<input type="text" id="to" name="to"/> 
+ 
+</div>
+
+
+$(function() {
+        $( "#from" ).datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 1,
+            onSelect: function( selectedDate ) {
+                if(this.id == 'from'){
+                  var dateMin = $('#from').datepicker("getDate");
+                  var rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(),dateMin.getDate() + 1); 
+                  var rMax = new Date(dateMin.getFullYear(), dateMin.getMonth(),dateMin.getDate() ); 
+                  alert(rMax);
+                  //$('#to').datepicker("option","minDate",rMin);
+                  //$('#to').datepicker("option","maxDate",rMax);  
+$('#to').val($.datepicker.formatDate('mm-dd-yy', new Date(rMax)));                    
+                }
+                
+            }
+        });
+    });
