@@ -60,3 +60,5 @@ Date: <input type='text' class='date' id="datepicker">
 
 </body>
 </html>
+
+http://dotnetlearners.com/blogs/jquery-datepicker-get-the-selected-date-value
