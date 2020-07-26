@@ -1,0 +1,25 @@
+$user = get_userdata( $user_id );
+
+// Get all the user roles for this user as an array.
+$user_roles = $user->roles;
+
+// Check if the specified role is present in the array.
+if ( in_array( 'subscriber', $user_roles, true ) ) {
+    // user is subscriber
+} elseif ( in_array( 'administrator', $user_roles, true ) ) {
+    // user is an administrator
+} elseif ( in_array( 'editor', $user_roles, true ) ) {
+    // user is an editor
+} elseif ( in_array( 'author', $user_roles, true ) ) {
+    // user is an author
+} elseif ( in_array( 'contributor', $user_roles, true ) ) {
+    // user is a contributor
+}
+
+
+By Sql
+
+SELECT wp_users.ID, wp_users.user_email, wp_users.user_login, wp_usermeta.meta_value
+FROM wp_users INNER JOIN wp_usermeta 
+ON wp_users.ID = wp_usermeta.user_id 
+WHERE wp_usermeta.meta_key = 'wp_capabilities'
