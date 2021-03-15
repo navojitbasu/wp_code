@@ -1,0 +1,11 @@
+How to display one element by same id and class
+
+var list = document.querySelectorAll(".um-field-error");
+
+
+  if (checkBox.checked == true){
+  	//alert(checkBox);
+  list[2].style.display = "block";
+  } else {
+     list[2].style.display ="none";
+  }
