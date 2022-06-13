@@ -1,0 +1,3 @@
+Install https://wordpress.org/plugins/contact-form-7-dynamic-text-extension/ plugin.
+
+Put [dynamichidden page-title "CF7_get_post_var key='title'"] shortcode in contact form 7 editor.
